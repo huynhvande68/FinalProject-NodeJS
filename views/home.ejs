@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      @import url("https://fons.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      ul {
+        position: relative;
+        display: flex;
+        gap: 25px;
+      }
+      ul li {
+        position: relative;
+        list-style: none;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        cursor: not-allowed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+      }
+      ul li:hover {
+        width: 180px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+      }
+      ul li::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50px;
+        background: linear-gradient(45deg, var(--i), var(--j));
+        opacity: 0;
+        transition: 0.5s;
+      }
+      ul li:hover::before {
+        opacity: 1;
+      }
+      ul li::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        height: 100%;
+        border-radius: 60px;
+        background: linear-gradient(45deg, var(--i), var(--j));
+        opacity: 0;
+        transition: 0.5s;
+        z-index: -1;
+        filter: blur(15px);
+      }
+      ul li:hover::after {
+        opacity: 0.5;
+      }
+      ul li i {
+        color: #777;
+        font-size: 1.75em !important;
+        transition: 0.5s;
+        transition-delay: 0.25s;
+      }
+      ul li:hover i {
+        transform: scale(0);
+        font-size: 1.75em;
+        transition-delay: 0.25s;
+      }
+      ul li a {
+        position: absolute;
+        text-decoration: none;
+      }
+      ul li .titulo {
+        color: #fff;
+        font-size: 1.1em !important;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transform: scale(0);
+        transition: 0.5s;
+        transition-delay: 0s;
+      }
+      ul li:hover .titulo {
+        transform: scale(1);
+        transition-delay: 0.25s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li style="--i: #559cff; --j: #51fffc">
+        <span class="icon"><i class="fa fa-facebook"></i></span>
+        <a
+          class="titulo"
+          href="https://www.facebook.com/profile.php?id=100012536023207"
+          >facebook</a
+        >
+      </li>
+      <li style="--i: #ff55a4; --j: #e88de1">
+        <span class="icon"><i class="fa fa-twitter"></i></span>
+        <a class="titulo" href="https://twitter.com/dee_dev_se">twitter</a>
+      </li>
+      <li style="--i: #71ff55; --j: #ceff51">
+        <span class="icon"><i class="fa fa-whatsapp"></i></span>
+        <a class="titulo" href="#">whatsapp</a>
+      </li>
+      <li style="--i: #e41414; --j: #ff9451">
+        <span class="icon"><i class="fa fa-linkedin"></i></span>
+        <a
+          class="titulo"
+          href="https://www.linkedin.com/in/de-huynh-van-a46398249/"
+          >linkedin</a
+        >
+      </li>
+      <li style="--i: #ff55a4; --j: #e88de1">
+        <span class="icon"><i class="fa fa-instagram"></i></span>
+        <a class="titulo" href="https://www.instagram.com/dede.9822/"
+          >instagram</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>
